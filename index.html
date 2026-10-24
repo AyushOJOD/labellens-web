@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LabelLens — AI Nutrition Label & Barcode Scanner for India</title>
+  <meta name="description"
+    content="Know what you're really eating. LabelLens scans packaged food barcodes and nutrition labels to detect hidden sugars, cheap palm oil, harmful INS additives, and FSSAI 2024 health ratings in 1 second.">
+  <meta name="keywords"
+    content="LabelLens, food scanner, barcode scanner, nutrition label, palm oil detector, hidden sugar, INS codes, FSSAI, ICMR 2024, healthy food India">
+  <meta name="author" content="Ayush">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url"
+    content="https://expo.dev/accounts/ayushdotcom/projects/labellens/builds/797d18ae-68f9-43b9-becf-84c829c99957">
+  <meta property="og:title" content="LabelLens — AI Food Label & Barcode Scanner for India">
+  <meta property="og:description"
+    content="Reveal what brands hide on the back of the pack. 1-second barcode scan, palm oil alerts, hidden sugar unmasker, and personalized health guards.">
+  <meta property="og:image" content="assets/images/hero-mockup.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+  <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Ambient Light Effects -->
+  <div class="ambient-glow ambient-top"></div>
+  <div class="ambient-glow ambient-mid"></div>
+
+  <!-- Header Navigation -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-link" id="brandLogoLink">
+        <div class="brand-icon-box">
+          <img src="assets/images/icon.png" alt="LabelLens Icon">
+        </div>
+        <div class="brand-text-col">
+          <span class="brand-title">LabelLens</span>
+          <span class="brand-badge">🇮🇳 FSSAI & ICMR 2024</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#simulator" class="nav-link">Live Simulator</a></li>
+          <li><a href="#why-labellens" class="nav-link">Why LabelLens</a></li>
+          <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+          <li><a href="#features" class="nav-link">Features</a></li>
+          <li><a href="#where-to-use" class="nav-link">Where To Use</a></li>
+          <li><a href="#ins-decoder" class="nav-link">INS Decoder</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="https://expo.dev/accounts/ayushdotcom/projects/labellens/builds/797d18ae-68f9-43b9-becf-84c829c99957"
+          target="_blank" rel="noopener noreferrer" class="nav-cta-btn" id="navDownloadBtn">
+          <span>📲 Download APK</span>
+        </a>
+        <button class="mobile-toggle-btn" id="mobileToggleBtn" aria-label="Toggle navigation menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-tag">
+            <span class="pulse-dot"></span>
+            <span>Multimodal AI Vision & Barcode Engine</span>
+          </div>
+
+          <h1 class="hero-title" id="mainHeroTitle">
+            Don't Trust The Front of The Pack. <br>
+            <span class="highlight">Scan The Back.</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Food brands spend millions crafting misleading claims like <em>"High Protein"</em>, <em>"Wheat
+              Goodness"</em>, or <em>"Zero Cholesterol"</em>. LabelLens cuts through marketing tricks in <strong>1
+              second</strong>—detecting hidden sugars, palm oil, harmful chemical additives (INS codes), and ICMR 2024
+            health ratings before you buy.
+          </p>
+
+          <div class="hero-actions">
+            <a href="https://expo.dev/accounts/ayushdotcom/projects/labellens/builds/797d18ae-68f9-43b9-becf-84c829c99957"
+              target="_blank" rel="noopener noreferrer" class="btn-primary" id="heroDownloadBtn">
+              <span>⚡ Download Standalone APK</span>
+              <span style="font-size: 0.8rem; opacity: 0.85;">(~50 MB)</span>
+            </a>
+            <a href="#simulator" class="btn-secondary" id="heroTrySimBtn">
+              <span>Try Live Simulator ↓</span>
+            </a>
+          </div>
+
+          <div class="hero-badges-row">
+            <div class="hero-pill-info">
+              <span>⚡</span>
+              <span><strong>1-Sec</strong> Instant Barcode</span>
+            </div>
+            <div class="hero-pill-info">
+              <span>🌴</span>
+              <span><strong>Palm Oil</strong> Alert</span>
+            </div>
+            <div class="hero-pill-info">
+              <span>🔒</span>
+              <span><strong>100% Offline</strong> Privacy</span>
+            </div>
+            <div class="hero-pill-info">
+              <span>🇮🇳</span>
+              <span><strong>FSSAI & ICMR</strong> Benchmarked</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-mockup-wrapper">
+            <img src="assets/images/hero-mockup.jpg" alt="LabelLens app in action in a supermarket"
+              class="hero-mockup-img">
+
+            <div class="hero-floating-badge badge-top-right">
+              <span class="float-badge-icon">🚦</span>
+              <div>
+                <div class="float-badge-title">Traffic Light Report</div>
+                <div class="float-badge-sub">High HFSS Alert Detected</div>
+              </div>
+            </div>
+
+            <div class="hero-floating-badge badge-bottom-left">
+              <span class="float-badge-icon">🥄</span>
+              <div>
+                <div class="float-badge-title">Teaspoons of Sugar</div>
+                <div class="float-badge-sub">Unmasks 50+ Hidden Names</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Phone Simulator Section -->
+    <section class="section-padding simulator-section" id="simulator">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Interactive Preview</span>
+          <h2 class="section-title">Experience LabelLens In Your Browser</h2>
+          <p class="section-desc">
+            Test real packaged products commonly found in Indian supermarket aisles. Switch dietary toggles to see how
+            LabelLens dynamically guards your health.
+          </p>
+        </div>
+
+        <div class="sim-container">
+          <!-- Left Controls -->
+          <div class="sim-controls">
+            <div class="sim-product-pills">
+              <span style="font-size: 0.85rem; font-weight: 700; color: var(--mint-glow); margin-bottom: 4px;">SELECT A
+                TEST PRODUCT:</span>
+
+              <button class="sim-product-btn active" data-prod="maggi" id="simProdMaggi">
+                <div class="sim-prod-info">
+                  <span class="sim-prod-icon">🍜</span>
+                  <div>
+                    <div class="sim-prod-title">Maggi 2-Minute Noodles</div>
+                    <div class="sim-prod-cat">Instant Noodles • 8901058863116</div>
+                  </div>
+                </div>
+                <span class="sim-prod-verdict verdict-red">HIGH HFSS</span>
+              </button>
+
+              <button class="sim-product-btn" data-prod="parleg" id="simProdParleG">
+                <div class="sim-prod-info">
+                  <span class="sim-prod-icon">🍪</span>
+                  <div>
+                    <div class="sim-prod-title">Parle-G Glucose Biscuits</div>
+                    <div class="sim-prod-cat">Biscuits • 8901719101038</div>
+                  </div>
+                </div>
+                <span class="sim-prod-verdict verdict-red">HIGH SUGAR</span>
+              </button>
+
+              <button class="sim-product-btn" data-prod="bhujia" id="simProdBhujia">
+                <div class="sim-prod-info">
+                  <span class="sim-prod-icon">🥔</span>
+                  <div>
+                    <div class="sim-prod-title">Haldiram's Aloo Bhujia</div>
+                    <div class="sim-prod-cat">Namkeen • 8904004400465</div>
+                  </div>
+                </div>
+                <span class="sim-prod-verdict verdict-red">HIGH FAT & SODIUM</span>
+              </button>
+
+              <button class="sim-product-btn" data-prod="cola" id="simProdCola">
+                <div class="sim-prod-info">
+                  <span class="sim-prod-icon">🥤</span>
+                  <div>
+                    <div class="sim-prod-title">Popular Cold Beverage</div>
+                    <div class="sim-prod-cat">Sweetened Carbonated • 8901764012211</div>
+                  </div>
+                </div>
+                <span class="sim-prod-verdict verdict-red">LIQUID SUGAR</span>
+              </button>
+
+              <button class="sim-product-btn" data-prod="oats" id="simProdOats">
+                <div class="sim-prod-info">
+                  <span class="sim-prod-icon">🥣</span>
+                  <div>
+                    <div class="sim-prod-title">100% Whole Rolled Oats</div>
+                    <div class="sim-prod-cat">Clean Grain • 8906001021481</div>
+                  </div>
+                </div>
+                <span class="sim-prod-verdict verdict-green">BALANCED CHOICE</span>
+              </button>
+            </div>
+
+            <!-- Dietary Profile Simulation Box -->
+            <div class="sim-profile-box">
+              <div class="sim-profile-header">
+                <span class="sim-profile-title">🛡️ Active Health Profile Simulation</span>
+                <span style="font-size: 0.72rem; color: var(--text-dim);">Live Filter</span>
+              </div>
+              <div class="sim-profile-switches">
+                <button class="sim-toggle-btn active" data-profile="diabetic" id="toggleDiabetic">
+                  <span class="sim-toggle-check">✓</span>
+                  <span>Diabetic Alert</span>
+                </button>
+                <button class="sim-toggle-btn" data-profile="hypertension" id="toggleSodium">
+                  <span class="sim-toggle-check"></span>
+                  <span>Low Sodium Guard</span>
+                </button>
+                <button class="sim-toggle-btn active" data-profile="palmOil" id="togglePalmOil">
+                  <span class="sim-toggle-check">✓</span>
+                  <span>Avoid Palm Oil</span>
+                </button>
+                <button class="sim-toggle-btn active" data-profile="pureVeg" id="toggleVeg">
+                  <span class="sim-toggle-check">✓</span>
+                  <span>Pure Vegetarian</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Phone Mockup -->
+          <div class="sim-phone-wrapper">
+            <div class="sim-phone-frame">
+              <div class="sim-phone-notch">
+                <div class="sim-phone-speaker"></div>
+                <div class="sim-phone-camera"></div>
+              </div>
+
+              <div class="sim-phone-screen">
+                <!-- App Header -->
+                <div class="sim-app-header">
+                  <div class="sim-app-logo">
+                    <span>🔍</span>
+                    <span>LabelLens</span>
+                  </div>
+                  <span class="sim-app-tag">AI Vision Active</span>
+                </div>
+
+                <!-- Viewfinder -->
+                <div class="sim-viewfinder">
+                  <img src="assets/images/hero-mockup.jpg" alt="Scanner Viewfinder" class="sim-viewfinder-bg">
+                  <div class="sim-corner-guides"></div>
+                  <div class="sim-laser-line"></div>
+                  <div class="sim-instant-chip">
+                    <span>🏷️</span>
+                    <span>1-Sec Barcode Lookup Active</span>
+                  </div>
+                </div>
+
+                <!-- Report Card Area -->
+                <div class="sim-app-body">
+                  <div class="sim-report-card">
+                    <div class="sim-report-banner status-red" id="simReportBanner">
+                      <span class="sim-banner-text" id="simBannerText">HIGH SODIUM & PALM OIL ALERT</span>
+                      <span class="sim-banner-badge">🇮🇳 ICMR 2024</span>
+                    </div>
+
+                    <div class="sim-report-content">
+                      <div class="sim-prod-header-row">
+                        <div>
+                          <div class="sim-prod-name-main" id="simProdName">Maggi 2-Minute Noodles</div>
+                          <div class="sim-prod-cat-sub" id="simProdCat">Instant Noodles (RTE) • per 100g</div>
+                        </div>
+                      </div>
+
+                      <!-- 4 Vital Metric Chips -->
+                      <div class="sim-chips-grid">
+                        <div class="sim-metric-chip">
+                          <span class="sim-chip-label">Total Sugar</span>
+                          <span class="sim-chip-val" id="simValSugar">1.8g (~0.4 tsp)</span>
+                        </div>
+                        <div class="sim-metric-chip">
+                          <span class="sim-chip-label">Sodium Content</span>
+                          <span class="sim-chip-val" id="simValSodium">820 mg (41% ICMR)</span>
+                        </div>
+                        <div class="sim-metric-chip">
+                          <span class="sim-chip-label">Energy</span>
+                          <span class="sim-chip-val" id="simValCals">427 kcal</span>
+                        </div>
+                        <div class="sim-metric-chip">
+                          <span class="sim-chip-label">Saturated Fat</span>
+                          <span class="sim-chip-val" id="simValSatFat">6.8g</span>
+                        </div>
+                      </div>
+
+                      <!-- Palm Oil Alert -->
+                      <div class="sim-palmoil-row sim-palmoil-alert" id="simPalmOilRow">
+                        ⚠️ Refined Palm Oil Detected in Noodle Cake
+                      </div>
+
+                      <!-- Profile Match Card -->
+                      <div class="sim-profile-match-card match-danger" id="simProfileMatchCard">
+                        <span>⚠️</span>
+                        <div>Personal Health Guard Warning</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Use LabelLens (Front vs Back Truth) -->
+    <section class="section-padding why-section" id="why-labellens">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">The Food Industry Dilemma</span>
+          <h2 class="section-title">Front-of-Pack Marketing vs. The Back-of-Pack Truth</h2>
+          <p class="section-desc">
+            Indian supermarket shelves are flooded with ultra-processed foods disguised as health foods. Here is what
+            happens when you compare what brands say versus what LabelLens uncovers.
+          </p>
+        </div>
+
+        <div class="truth-comparison-card">
+          <div class="truth-grid">
+            <div class="truth-col col-front">
+              <div class="col-header-pill">❌ The Front of The Box</div>
+              <h3 class="truth-heading">What The Brand Claims</h3>
+              <ul class="truth-list">
+                <li class="truth-item">
+                  <span class="truth-icon-cross">✕</span>
+                  <div><strong>"Wheat Goodness / Multi-Grain"</strong> — But refined wheat flour (Maida) makes up 75% of
+                    the total ingredient list.</div>
+                </li>
+                <li class="truth-item">
+                  <span class="truth-icon-cross">✕</span>
+                  <div><strong>"No Added Sugar"</strong> — Sweetened with concentrated Apple Juice Puree, Maltodextrin,
+                    or Invert Sugar Syrup.</div>
+                </li>
+                <li class="truth-item">
+                  <span class="truth-icon-cross">✕</span>
+                  <div><strong>"Zero Cholesterol"</strong> — Plant foods never contain cholesterol, but they are fried
+                    in artery-clogging Palm Oil!</div>
+                </li>
+                <li class="truth-item">
+                  <span class="truth-icon-cross">✕</span>
+                  <div><strong>"Only 40 Calories!"</strong> — Calorie count based on an unrealistically small 10g
+                    serving size nobody actually eats.</div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="truth-col col-back">
+              <div class="col-header-pill">✓ What LabelLens Reveals</div>
+              <h3 class="truth-heading">The Unvarnished Reality</h3>
+              <ul class="truth-list">
+                <li class="truth-item">
+                  <span class="truth-icon-check">✓</span>
+                  <div><strong>Identifies Exact Grain Ratios</strong> — Exposes refined maida vs genuine whole grain
+                    percentages.</div>
+                </li>
+                <li class="truth-item">
+                  <span class="truth-icon-check">✓</span>
+                  <div><strong>Unmasks 50+ Stealth Sugars</strong> — Highlights Maltodextrin (GI 110) and calculates
+                    actual teaspoons of sugar.</div>
+                </li>
+                <li class="truth-item">
+                  <span class="truth-icon-check">✓</span>
+                  <div><strong>Detects Refined Palm Oil & Palmolein</strong> — Displays bold warning or confirms 100%
+                    Palm Oil Free compliance.</div>
+                </li>
+                <li class="truth-item">
+                  <span class="truth-icon-check">✓</span>
+                  <div><strong>Automatic 100g Normalization</strong> — Mathematical parity so you can compare products
+                    fairly side-by-side.</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 Pillars Grid -->
+        <div class="pillars-grid">
+          <div class="pillar-card">
+            <div class="pillar-icon-box">🍯</div>
+            <h3 class="pillar-title">50+ Hidden Sugar Aliases</h3>
+            <p class="pillar-desc">
+              Companies bypass consumer suspicion by splitting sugar into Maltodextrin, Invert Sugar Syrup, Liquid
+              Glucose, Dextrose, and High Fructose Corn Syrup. LabelLens unmasks them instantly.
+            </p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-box">🌴</div>
+            <h3 class="pillar-title">The Palm Oil Epidemic</h3>
+            <p class="pillar-desc">
+              Over 80% of packaged snacks in India are fried in cheap refined palmolein or palm oil, packed with
+              saturated palmitic acid. LabelLens checks every single oil declaration.
+            </p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-box">🧪</div>
+            <h3 class="pillar-title">The INS Code Mystery</h3>
+            <p class="pillar-desc">
+              Cryptic codes like INS 621, INS 102, INS 110, and INS 951 conceal MSG, coal-tar synthetic dyes, and
+              artificial sweeteners. LabelLens decodes them in plain English.
+            </p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-box">⚖️</div>
+            <h3 class="pillar-title">Normalized Serving Math</h3>
+            <p class="pillar-desc">
+              Deceptive brands advertise numbers for a tiny 15g biscuit serving. LabelLens normalizes all nutrition data
+              to 100g/100ml against ICMR 2,000mg sodium and FSSAI HFSS thresholds.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works (3 Steps) -->
+    <section class="section-padding steps-section" id="how-it-works">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Seamless Flow</span>
+          <h2 class="section-title">How LabelLens Works</h2>
+          <p class="section-desc">
+            No typing, no manual searching, and no nutrition degree required. Get authoritative transparency in 3
+            effortless steps.
+          </p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <span class="step-number">01</span>
+            <div class="step-icon-badge">📸</div>
+            <h3 class="step-title">Scan Barcode or Snap Label</h3>
+            <p class="step-desc">
+              Point your camera at the barcode for an instant 1-second cached lookup, or take a crisp photo of the
+              back-panel Nutrition Facts table.
+            </p>
+            <ul class="step-bullets">
+              <li>• EAN-13, EAN-8, UPC Barcode auto-detection</li>
+              <li>• Integrated flashlight for dark supermarket aisles</li>
+              <li>• Works on crinkled chip bags and curved bottles</li>
+            </ul>
+          </div>
+
+          <div class="step-card">
+            <span class="step-number">02</span>
+            <div class="step-icon-badge">🧠</div>
+            <h3 class="step-title">Multimodal AI Extraction</h3>
+            <p class="step-desc">
+              Gemini Vision parses all 12 nutritional metrics, extracts the full ingredients list, decodes chemical INS
+              codes, and normalizes serving sizes.
+            </p>
+            <ul class="step-bullets">
+              <li>• Checks against FSSAI & ICMR 2024 category limits</li>
+              <li>• Calculates teaspoons of sugar & % daily sodium quota</li>
+              <li>• Detects hidden sugars, sweeteners, and synthetic dyes</li>
+            </ul>
+          </div>
+
+          <div class="step-card">
+            <span class="step-number">03</span>
+            <div class="step-icon-badge">🚦</div>
+            <h3 class="step-title">Plain-English Health Verdict</h3>
+            <p class="step-desc">
+              Receive a clear Red (High HFSS), Amber (Moderate), or Green (Balanced) traffic light status along with a
+              personalized match for your health goals.
+            </p>
+            <ul class="step-bullets">
+              <li>• Diabetic, Low-Sodium & Vegetarian guard checks</li>
+              <li>• Allergen warnings (Gluten, Milk, Soy, Peanuts)</li>
+              <li>• Saves to local history for offline grocery review</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Features Matrix -->
+    <section class="section-padding" id="features">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Comprehensive Arsenal</span>
+          <h2 class="section-title">Engineered For Everyday Indian Shoppers</h2>
+          <p class="section-desc">
+            Every feature in LabelLens was designed to address specific nutritional challenges in Indian packaged
+            grocery products.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-box">
+            <div class="feature-icon-row">
+              <div class="feature-icon">⚡</div>
+              <span class="feature-tag-chip">Instant Mode</span>
+            </div>
+            <h3 class="feature-title">1-Second Barcode Scanner</h3>
+            <p class="feature-desc">
+              Instant hardware camera scanner powered by our self-growing local persistent cache. Popular Indian staples
+              like Maggi, Parle-G, Lay's, Kurkure, and Haldiram's scan instantaneously without waiting.
+            </p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-row">
+              <div class="feature-icon">🔍</div>
+              <span class="feature-tag-chip">Multimodal Vision</span>
+            </div>
+            <h3 class="feature-title">AI Nutrition Table Scanner</h3>
+            <p class="feature-desc">
+              No barcode? Just snap the back-of-pack printed table. Gemini Vision extracts calories, total fats,
+              saturated fats, trans fats, added sugars, sodium, and ingredients directly from the photo.
+            </p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-row">
+              <div class="feature-icon">🚦</div>
+              <span class="feature-tag-chip">FSSAI Benchmarks</span>
+            </div>
+            <h3 class="feature-title">Traffic Light Risk Rating</h3>
+            <p class="feature-desc">
+              Color-coded health classification based on official 2024 FSSAI High Fat, Sugar & Salt (HFSS) cutoffs and
+              ICMR-NIN dietary guidelines across 8 distinct Indian food categories.
+            </p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-row">
+              <div class="feature-icon">🥄</div>
+              <span class="feature-tag-chip">Everyday Units</span>
+            </div>
+            <h3 class="feature-title">Teaspoons of Sugar Calculator</h3>
+            <p class="feature-desc">
+              Grams of sugar are difficult to visualize on the fly. LabelLens calculates the exact equivalent in
+              household teaspoons of sugar so you know precisely what you are consuming.
+            </p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-row">
+              <div class="feature-icon">🌴</div>
+              <span class="feature-tag-chip">Heart Health</span>
+            </div>
+            <h3 class="feature-title">Palm Oil & Palmolein Detector</h3>
+            <p class="feature-desc">
+              Dedicated detection engine for refined palmolein, fractionated palm oil, and hydrogenated vegetable fats
+              (vanaspati), or verifies a clean 100% Palm Oil Free badge.
+            </p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-row">
+              <div class="feature-icon">🧪</div>
+              <span class="feature-tag-chip">Additive OCR</span>
+            </div>
+            <h3 class="feature-title">INS & E-Number Decoder</h3>
+            <p class="feature-desc">
+              Decodes 20+ common Indian packaged food additives: artificial sweeteners (INS 951 Aspartame, INS 955
+              Sucralose), synthetic colors (INS 102 Tartrazine), preservatives (INS 211), and MSG (INS 621).
+            </p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-row">
+              <div class="feature-icon">🛡️</div>
+              <span class="feature-tag-chip">Personalized</span>
+            </div>
+            <h3 class="feature-title">Custom Health Profile Guards</h3>
+            <p class="feature-desc">
+              Toggle specific guards for Diabetics (flags >5g sugar), Hypertension (flags >400mg sodium), Pure
+              Vegetarian (flags gelatine/animal enzymes), and common allergens (Gluten, Peanuts, Soy, Milk).
+            </p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-row">
+              <div class="feature-icon">🔒</div>
+              <span class="feature-tag-chip">Zero Friction</span>
+            </div>
+            <h3 class="feature-title">100% Private & Offline History</h3>
+            <p class="feature-desc">
+              No account creation, no email address, and zero tracking. Your health profile and past scan history are
+              stored locally on your device via encrypted AsyncStorage.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Where To Use & How To Use (Everyday Life Scenarios) -->
+    <section class="section-padding where-section" id="where-to-use">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Real-World Utility</span>
+          <h2 class="section-title">Where & How To Use LabelLens</h2>
+          <p class="section-desc">
+            From crowded supermarket aisles to checking kids' school snacks at home, LabelLens gives you instant
+            confidence wherever food choices happen.
+          </p>
+        </div>
+
+        <div class="scenarios-grid">
+          <div class="scenario-card">
+            <div class="scenario-icon-big">🛒</div>
+            <span class="scenario-badge">In The Supermarket</span>
+            <h3 class="scenario-title">Grocery Aisles & Kirana Stores</h3>
+            <p class="scenario-desc">
+              Standing in front of the biscuit or breakfast cereal rack at DMart, Reliance Smart, or your neighborhood
+              store? Use the 1-second barcode scanner before adding boxes to your trolley.
+            </p>
+            <div class="scenario-pro-tip">
+              <strong>Supermarket Tip:</strong> Turn the box around and point at the EAN barcode. In 1 second, you'll
+              know if that "diet" biscuit is loaded with palm oil and sugar.
+            </div>
+          </div>
+
+          <div class="scenario-card">
+            <div class="scenario-icon-big">🏡</div>
+            <span class="scenario-badge">At Home</span>
+            <h3 class="scenario-title">Kitchen Pantry Audit</h3>
+            <p class="scenario-desc">
+              Go through your kitchen shelves, snack drawers, sauces, ketchup bottles, and noodle packets. Discover what
+              hidden chemicals your family is eating daily.
+            </p>
+            <div class="scenario-pro-tip">
+              <strong>Pantry Tip:</strong> Check your tomato ketchup and instant soup packets. Most Indian consumers are
+              shocked to find 25% to 35% pure sugar!
+            </div>
+          </div>
+
+          <div class="scenario-card">
+            <div class="scenario-icon-big">🎒</div>
+            <span class="scenario-badge">For Parents</span>
+            <h3 class="scenario-title">Kids' Snacks & School Tiffin</h3>
+            <p class="scenario-desc">
+              Protect growing children from hidden artificial sweeteners, synthetic dyes (Tartrazine INS 102 linked to
+              hyperactivity), and covert liquid sugars in malt health drinks and fruit juices.
+            </p>
+            <div class="scenario-pro-tip">
+              <strong>Parent Tip:</strong> Scan "health drinks" and flavored milk. Many contain over 4 teaspoons of
+              sugar in a single glass!
+            </div>
+          </div>
+
+          <div class="scenario-card">
+            <div class="scenario-icon-big">🩺</div>
+            <span class="scenario-badge">Medical Care</span>
+            <h3 class="scenario-title">Diabetes & Blood Pressure Care</h3>
+            <p class="scenario-desc">
+              Enable your Diabetic or Low-Sodium Health Profile in the app. LabelLens automatically flags any food
+              containing over 5g added sugar, maltodextrin spikes, or sodium above ICMR limits.
+            </p>
+            <div class="scenario-pro-tip">
+              <strong>Health Tip:</strong> Maltodextrin has a higher glycemic index than pure sugar. LabelLens spots it
+              even when the front of the pack says "Sugar Free".
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive INS Decoder -->
+    <section class="section-padding decoder-section" id="ins-decoder">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Instant Chemical Lookup</span>
+          <h2 class="section-title">Decode Supermarket Additives & INS Numbers</h2>
+          <p class="section-desc">
+            What is really behind the numbers on your food wrapper? Click any additive below to see its plain-English
+            explanation.
+          </p>
+        </div>
+
+        <div class="decoder-box">
+          <div class="decoder-pills-row">
+            <button class="ins-filter-pill active" data-ins="INS 621">INS 621 (MSG)</button>
+            <button class="ins-filter-pill" data-ins="INS 102">INS 102 (Tartrazine)</button>
+            <button class="ins-filter-pill" data-ins="INS 110">INS 110 (Sunset Yellow)</button>
+            <button class="ins-filter-pill" data-ins="INS 150d">INS 150d (Caramel IV)</button>
+            <button class="ins-filter-pill" data-ins="INS 951">INS 951 (Aspartame)</button>
+            <button class="ins-filter-pill" data-ins="INS 955">INS 955 (Sucralose)</button>
+            <button class="ins-filter-pill" data-ins="INS 211">INS 211 (Sodium Benzoate)</button>
+            <button class="ins-filter-pill" data-ins="Maltodextrin">Maltodextrin</button>
+            <button class="ins-filter-pill" data-ins="Palmolein">Refined Palmolein</button>
+          </div>
+
+          <div class="decoder-result-card" id="decoderResultCard">
+            <div class="ins-main-info">
+              <div class="ins-code-badge" id="insCodeBadge">INS 621 - Monosodium Glutamate (MSG)</div>
+              <span class="ins-category-tag verdict-amber" id="insCategoryTag">Flavor Enhancer</span>
+              <p class="ins-desc" id="insDesc">
+                Concentrated umami flavor enhancer. Often masked on packaging under terms like 'yeast extract' or
+                'hydrolyzed vegetable protein'.
+              </p>
+            </div>
+
+            <div class="ins-side-meta">
+              <div class="meta-row">
+                <span class="meta-label">Common Food Sources</span>
+                <span class="meta-val" id="insFoods">Instant noodles, potato chips, savory seasonings, soups</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-label">Health Concern Level</span>
+                <span class="meta-val verdict-amber" id="insRisk">Medium Concern</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download & Installation Section -->
+    <section class="section-padding download-section" id="download">
+      <div class="container">
+        <div class="download-card-wrapper">
+          <div class="download-content">
+            <span class="dl-badge-tag">📲 Standalone Release v1.0.0</span>
+            <h2 class="dl-title">Get LabelLens For Android Today</h2>
+            <p class="dl-desc">
+              Download the lightweight, production-optimized APK built directly with Expo EAS. Hermes bytecode enabled,
+              R8 ProGuard minified (~15 MB download), and completely ad-free.
+            </p>
+
+            <div class="dl-actions">
+              <a href="https://expo.dev/accounts/ayushdotcom/projects/labellens/builds/797d18ae-68f9-43b9-becf-84c829c99957"
+                target="_blank" rel="noopener noreferrer" class="btn-download-hero" id="directApkDownloadBtn">
+                <span>🤖 Download APK from Expo EAS</span>
+                <span>→</span>
+              </a>
+              <span class="dl-sub-note">
+                ✓ Android 8.0+ Compatible • Only requires Camera permission • Zero account signup
+              </span>
+            </div>
+          </div>
+
+          <!-- QR Code Download Box -->
+          <div class="download-qr-box">
+            <img src="assets/images/expo-build-qr.png"
+              alt="Scan QR code with your phone camera to download LabelLens APK" class="qr-code-img">
+            <div class="qr-label-bold">Scan to Download on Phone</div>
+            <div class="qr-label-sub">Point your phone camera at this QR code to open the Expo download page instantly.
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 Step Installation Guide -->
+        <div class="install-steps-grid">
+          <div class="install-step-card">
+            <div class="inst-num">1</div>
+            <div>
+              <div class="inst-title">Download APK</div>
+              <div class="inst-text">Tap the download button or scan the QR code to fetch the standalone
+                <code>.apk</code> file.</div>
+            </div>
+          </div>
+
+          <div class="install-step-card">
+            <div class="inst-num">2</div>
+            <div>
+              <div class="inst-title">Allow Install From Browser</div>
+              <div class="inst-text">If prompted by Android, tap <em>"Settings"</em> and enable <em>"Allow from this
+                  source"</em> for your browser.</div>
+            </div>
+          </div>
+
+          <div class="install-step-card">
+            <div class="inst-num">3</div>
+            <div>
+              <div class="inst-title">Open & Start Scanning</div>
+              <div class="inst-text">Launch LabelLens, allow camera permission, and scan your first product in 1 second!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Frequently Asked Questions -->
+    <section class="section-padding" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Got Questions?</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-desc">
+            Everything you need to know about LabelLens, our evaluation methodology, and installing the app.
+          </p>
+        </div>
+
+        <div class="faq-grid">
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How does the Traffic Light rating work?</span>
+              <span class="faq-chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                LabelLens evaluates nutrients against the latest official FSSAI High Fat, Sugar & Salt (HFSS) draft
+                regulations and ICMR-NIN 2024 Dietary Guidelines for Indians. Products breaching high-risk cutoffs for
+                saturated fat, added sugar, or sodium receive a Red alert. Products meeting moderate criteria get Amber,
+                while clean foods with balanced nutrients receive Green.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Is LabelLens free to use? Do I need to create an account?</span>
+              <span class="faq-chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes, LabelLens is 100% free to download and use. It requires zero signup, no email, no phone number, and
+                no passwords. All your scan history and health profile settings are stored strictly offline on your own
+                device.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How is this different from scanning with Google Lens or reading the label?</span>
+              <span class="faq-chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Google Lens only extracts raw text or searches the web. It cannot normalize serving sizes, calculate
+                household teaspoons of sugar, detect hidden chemical INS additives, or evaluate nutrients against Indian
+                ICMR benchmarks. LabelLens translates complicated chemical jargon into clear actionable verdicts in
+                seconds.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What permissions does the app require?</span>
+              <span class="faq-chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                LabelLens only requests access to your Camera so it can read barcodes and capture photos of nutrition
+                labels. It does not ask for contacts, location, storage access, or device identifiers.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How do I install the standalone APK on my Android phone?</span>
+              <span class="faq-chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Tap the "Download Standalone APK" button to go to the official Expo EAS build page. Download the APK
+                file. When opened, Android may show a standard safety prompt asking you to allow installation from your
+                browser (Chrome/Firefox). Enable the toggle, tap "Install", and you're ready to scan!
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What if a product's barcode is not in the database yet?</span>
+              <span class="faq-chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                LabelLens includes dual scanning modes. If an obscure or regional barcode is not yet indexed, simply
+                switch to the "Photo Scanner" tab and snap a photo of the nutrition table on the back panel. Our
+                multimodal AI will parse and evaluate the label instantly.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-link">
+            <div class="brand-icon-box">
+              <img src="assets/images/icon.png" alt="LabelLens Icon">
+            </div>
+            <div class="brand-text-col">
+              <span class="brand-title">LabelLens</span>
+              <span class="brand-badge">Food Transparency Engine</span>
+            </div>
+          </div>
+          <p class="footer-desc">
+            Empowering Indian consumers to see through deceptive food packaging with instant multimodal AI vision,
+            barcode intelligence, and ICMR 2024 nutritional benchmarks.
+          </p>
+        </div>
+
+        <div class="footer-nav-col">
+          <div class="footer-col-title">Navigation</div>
+          <ul class="footer-links">
+            <li><a href="#simulator">Interactive Simulator</a></li>
+            <li><a href="#why-labellens">Front vs Back Truth</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#features">Features Matrix</a></li>
+            <li><a href="#where-to-use">Where To Use</a></li>
+            <li><a href="#ins-decoder">INS Additive Decoder</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-download-col">
+          <div class="footer-col-title">Get The App</div>
+          <ul class="footer-links">
+            <li><a
+                href="https://expo.dev/accounts/ayushdotcom/projects/labellens/builds/797d18ae-68f9-43b9-becf-84c829c99957"
+                target="_blank" rel="noopener noreferrer">Download Android APK (Expo EAS)</a></li>
+            <li><a href="#download">Scan QR Code</a></li>
+            <li><a href="#faq">Installation FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-disclaimer">
+          <strong>Disclaimer:</strong> LabelLens is an independent consumer educational and informational tool
+          benchmarked against published ICMR-NIN 2024 guidelines and FSSAI draft regulations. It does not replace
+          professional medical or clinical dietary advice.
+        </div>
+        <div class="footer-copy">
+          © 2026 LabelLens. Built with ❤️ for healthier Indian families.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Download Bar (Appears on scroll) -->
+  <a href="https://expo.dev/accounts/ayushdotcom/projects/labellens/builds/797d18ae-68f9-43b9-becf-84c829c99957"
+    target="_blank" rel="noopener noreferrer" class="floating-download-bar" id="floatingDownloadBar">
+    <span>📲 Download LabelLens APK</span>
+  </a>
+
+  <!-- Application Logic -->
+  <script src="app.js"></script>
+</body>
+
+</html>
